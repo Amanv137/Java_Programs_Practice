@@ -1,0 +1,103 @@
+Categories the persons
+Problem Description
+
+Write a program to input from user a float value(A) representing the height of persons.
+
+You have to print the category of that person.
+If the height is greater than or equal to 195 then that person is "abnormal".
+If the height is in range of [165 -195) then that person is "taller".
+If the height is in range of [150 -165) then that person is "average".
+If the height is smaller than 150 then that person is "dwarf".
+
+
+Problem Constraints
+50 <= A <= 250
+
+
+
+Input Format
+One line containing a float value A.
+
+
+
+Output Format
+A string representing the category of the person.
+
+
+
+Example Input
+Input 1:
+
+165
+Input 2:
+
+205.8
+Input 3:
+
+155
+
+
+Example Output
+Output 1:
+
+taller
+Output 2:
+
+abnormal
+Output 3:
+
+average
+
+
+Example Explanation
+Explanation 1:
+
+Clearly, 165 is in the range of taller.
+Explanation 2:
+
+Clearly, 205.8 is in the range of abnormal.
+Explanation 3:
+
+Clearly, 155 is in the range of average.
+
+
+
+************************************************************************
+
+import java.lang.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // YOUR CODE GOES HERE
+        // Please take input and print output to standard input/output (stdin/stdout)
+        // DO NOT USE ARGUMENTS FOR INPUTS
+        // E.g. 'Scanner' for input & 'System.out' for output
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int  i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n-i;j++)
+            {
+                System.out.print("0"+" ");
+            }
+            for(int j=i;j<=((2*i)-1);j++)
+            {
+                System.out.print(j+" ");
+            }
+            for(int j=((2*i)-2);j>=i;j--)
+            {
+                System.out.print(j+" ");
+            }
+            for(int j=1;j<=n-i;j++)
+            {
+                if(j!=n)
+                System.out.print("0"+" ");
+                else
+                System.out.print("0");
+            }
+            System.out.println();
+
+        }
+    }
+}
